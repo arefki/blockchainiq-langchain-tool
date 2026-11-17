@@ -1,0 +1,59 @@
+{
+  "author": "eqiverse",
+  "dependencies": {
+    "@langchain/core": "^1.4.1",
+    "@x402/evm": "^2.31.0",
+    "@x402/fetch": "^2.31.0",
+    "viem": "^2.58.0",
+    "zod": "^4.6.7"
+  },
+  "description": "LangChain.js tools for the Blockchain IQ x402 pay-per-call crypto data API (USDC on Base, no API key).",
+  "devDependencies": {
+    "@langchain/openai": "^1.8.4",
+    "@types/node": "^26.6.6",
+    "langchain": "^1.6.6",
+    "typescript": "^5.9.0"
+  },
+  "engines": {
+    "node": ">=18"
+  },
+  "exports": {
+    ".": {
+      "default": "./dist/src/index.js",
+      "types": "./dist/src/index.d.ts"
+    }
+  },
+  "files": [
+    "dist",
+    "README.md",
+    "LICENSE"
+  ],
+  "keywords": [
+    "langchain",
+    "x402",
+    "blockchain-iq",
+    "crypto-data",
+    "usdc",
+    "base",
+    "agent-tools"
+  ],
+  "license": "MIT",
+  "main": "dist/src/index.js",
+  "name": "blockchainiq-langchain-tool",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/arefki/blockchainiq-langchain-tool"
+  },
+  "scripts": {
+    "build": "tsc",
+    "example:agent": "node dist/examples/agent.js",
+    "example:brief": "node dist/examples/brief.js",
+    "test": "npm run build && node --test \"dist/test/**/*.test.js\"",
+    "test:call": "node dist/scripts/test-call.js",
+    "test:call:dry": "node dist/scripts/test-call.js --dry-run",
+    "typecheck": "tsc --noEmit"
+  },
+  "type": "module",
+  "types": "dist/src/index.d.ts",
+  "version": "1.0.0"
+}
